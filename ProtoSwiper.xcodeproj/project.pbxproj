@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF0D61E91AA24D7900F2EF92 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D61E81AA24D7900F2EF92 /* main.m */; };
+		BF0D61EC1AA24D7900F2EF92 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D61EB1AA24D7900F2EF92 /* AppDelegate.m */; };
+		BF0D61EF1AA24D7900F2EF92 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D61EE1AA24D7900F2EF92 /* ViewController.m */; };
+		BF0D61F21AA24D7900F2EF92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF0D61F01AA24D7900F2EF92 /* Main.storyboard */; };
+		BF0D61F41AA24D7900F2EF92 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0D61F31AA24D7900F2EF92 /* Images.xcassets */; };
+		BF0D61F71AA24D7900F2EF92 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0D61F51AA24D7900F2EF92 /* LaunchScreen.xib */; };
+		BF0D62031AA24D7900F2EF92 /* ProtoSwiperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D62021AA24D7900F2EF92 /* ProtoSwiperTests.m */; };
+		BF460D461AA6AFC9006C51F4 /* SwiperControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = BF460D451AA6AFC9006C51F4 /* SwiperControlBehavior.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF0D61FD1AA24D7900F2EF92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF0D61DB1AA24D7900F2EF92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF0D61E21AA24D7900F2EF92;
+			remoteInfo = ProtoSwiper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF0D61E31AA24D7900F2EF92 /* ProtoSwiper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProtoSwiper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0D61E71AA24D7900F2EF92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF0D61E81AA24D7900F2EF92 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF0D61EA1AA24D7900F2EF92 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF0D61EB1AA24D7900F2EF92 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF0D61ED1AA24D7900F2EF92 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BF0D61EE1AA24D7900F2EF92 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BF0D61F11AA24D7900F2EF92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF0D61F31AA24D7900F2EF92 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BF0D61F61AA24D7900F2EF92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BF0D61FC1AA24D7900F2EF92 /* ProtoSwiperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProtoSwiperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0D62011AA24D7900F2EF92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF0D62021AA24D7900F2EF92 /* ProtoSwiperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtoSwiperTests.m; sourceTree = "<group>"; };
+		BF460D441AA6AFC9006C51F4 /* SwiperControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiperControlBehavior.h; sourceTree = "<group>"; };
+		BF460D451AA6AFC9006C51F4 /* SwiperControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiperControlBehavior.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF0D61E01AA24D7900F2EF92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF0D61F91AA24D7900F2EF92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF0D61DA1AA24D7900F2EF92 = {
+			isa = PBXGroup;
+			children = (
+				BF0D61E51AA24D7900F2EF92 /* ProtoSwiper */,
+				BF0D61FF1AA24D7900F2EF92 /* ProtoSwiperTests */,
+				BF0D61E41AA24D7900F2EF92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF0D61E41AA24D7900F2EF92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D61E31AA24D7900F2EF92 /* ProtoSwiper.app */,
+				BF0D61FC1AA24D7900F2EF92 /* ProtoSwiperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF0D61E51AA24D7900F2EF92 /* ProtoSwiper */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D61EA1AA24D7900F2EF92 /* AppDelegate.h */,
+				BF0D61EB1AA24D7900F2EF92 /* AppDelegate.m */,
+				BF0D61ED1AA24D7900F2EF92 /* ViewController.h */,
+				BF0D61EE1AA24D7900F2EF92 /* ViewController.m */,
+				BF460D441AA6AFC9006C51F4 /* SwiperControlBehavior.h */,
+				BF460D451AA6AFC9006C51F4 /* SwiperControlBehavior.m */,
+				BF0D61F01AA24D7900F2EF92 /* Main.storyboard */,
+				BF0D61F31AA24D7900F2EF92 /* Images.xcassets */,
+				BF0D61F51AA24D7900F2EF92 /* LaunchScreen.xib */,
+				BF0D61E61AA24D7900F2EF92 /* Supporting Files */,
+			);
+			path = ProtoSwiper;
+			sourceTree = "<group>";
+		};
+		BF0D61E61AA24D7900F2EF92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D61E71AA24D7900F2EF92 /* Info.plist */,
+				BF0D61E81AA24D7900F2EF92 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF0D61FF1AA24D7900F2EF92 /* ProtoSwiperTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D62021AA24D7900F2EF92 /* ProtoSwiperTests.m */,
+				BF0D62001AA24D7900F2EF92 /* Supporting Files */,
+			);
+			path = ProtoSwiperTests;
+			sourceTree = "<group>";
+		};
+		BF0D62001AA24D7900F2EF92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF0D62011AA24D7900F2EF92 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF0D61E21AA24D7900F2EF92 /* ProtoSwiper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF0D62061AA24D7900F2EF92 /* Build configuration list for PBXNativeTarget "ProtoSwiper" */;
+			buildPhases = (
+				BF0D61DF1AA24D7900F2EF92 /* Sources */,
+				BF0D61E01AA24D7900F2EF92 /* Frameworks */,
+				BF0D61E11AA24D7900F2EF92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProtoSwiper;
+			productName = ProtoSwiper;
+			productReference = BF0D61E31AA24D7900F2EF92 /* ProtoSwiper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF0D61FB1AA24D7900F2EF92 /* ProtoSwiperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF0D62091AA24D7900F2EF92 /* Build configuration list for PBXNativeTarget "ProtoSwiperTests" */;
+			buildPhases = (
+				BF0D61F81AA24D7900F2EF92 /* Sources */,
+				BF0D61F91AA24D7900F2EF92 /* Frameworks */,
+				BF0D61FA1AA24D7900F2EF92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF0D61FE1AA24D7900F2EF92 /* PBXTargetDependency */,
+			);
+			name = ProtoSwiperTests;
+			productName = ProtoSwiperTests;
+			productReference = BF0D61FC1AA24D7900F2EF92 /* ProtoSwiperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF0D61DB1AA24D7900F2EF92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Aditya KD";
+				TargetAttributes = {
+					BF0D61E21AA24D7900F2EF92 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					BF0D61FB1AA24D7900F2EF92 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = BF0D61E21AA24D7900F2EF92;
+					};
+				};
+			};
+			buildConfigurationList = BF0D61DE1AA24D7900F2EF92 /* Build configuration list for PBXProject "ProtoSwiper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF0D61DA1AA24D7900F2EF92;
+			productRefGroup = BF0D61E41AA24D7900F2EF92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF0D61E21AA24D7900F2EF92 /* ProtoSwiper */,
+				BF0D61FB1AA24D7900F2EF92 /* ProtoSwiperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF0D61E11AA24D7900F2EF92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0D61F21AA24D7900F2EF92 /* Main.storyboard in Resources */,
+				BF0D61F71AA24D7900F2EF92 /* LaunchScreen.xib in Resources */,
+				BF0D61F41AA24D7900F2EF92 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF0D61FA1AA24D7900F2EF92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF0D61DF1AA24D7900F2EF92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0D61EF1AA24D7900F2EF92 /* ViewController.m in Sources */,
+				BF460D461AA6AFC9006C51F4 /* SwiperControlBehavior.m in Sources */,
+				BF0D61EC1AA24D7900F2EF92 /* AppDelegate.m in Sources */,
+				BF0D61E91AA24D7900F2EF92 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF0D61F81AA24D7900F2EF92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF0D62031AA24D7900F2EF92 /* ProtoSwiperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF0D61FE1AA24D7900F2EF92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF0D61E21AA24D7900F2EF92 /* ProtoSwiper */;
+			targetProxy = BF0D61FD1AA24D7900F2EF92 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF0D61F01AA24D7900F2EF92 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF0D61F11AA24D7900F2EF92 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF0D61F51AA24D7900F2EF92 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF0D61F61AA24D7900F2EF92 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF0D62041AA24D7900F2EF92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF0D62051AA24D7900F2EF92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF0D62071AA24D7900F2EF92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Aditya Krishnadevan (PG344QZUY3)";
+				INFOPLIST_FILE = ProtoSwiper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BF0D62081AA24D7900F2EF92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Aditya Krishnadevan (2C88P4J89F)";
+				INFOPLIST_FILE = ProtoSwiper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BF0D620A1AA24D7900F2EF92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ProtoSwiperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProtoSwiper.app/ProtoSwiper";
+			};
+			name = Debug;
+		};
+		BF0D620B1AA24D7900F2EF92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ProtoSwiperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProtoSwiper.app/ProtoSwiper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF0D61DE1AA24D7900F2EF92 /* Build configuration list for PBXProject "ProtoSwiper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF0D62041AA24D7900F2EF92 /* Debug */,
+				BF0D62051AA24D7900F2EF92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF0D62061AA24D7900F2EF92 /* Build configuration list for PBXNativeTarget "ProtoSwiper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF0D62071AA24D7900F2EF92 /* Debug */,
+				BF0D62081AA24D7900F2EF92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF0D62091AA24D7900F2EF92 /* Build configuration list for PBXNativeTarget "ProtoSwiperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF0D620A1AA24D7900F2EF92 /* Debug */,
+				BF0D620B1AA24D7900F2EF92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF0D61DB1AA24D7900F2EF92 /* Project object */;
+}
