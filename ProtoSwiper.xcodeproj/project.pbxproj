@@ -15,6 +15,22 @@
 		BF0D61F71AA24D7900F2EF92 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0D61F51AA24D7900F2EF92 /* LaunchScreen.xib */; };
 		BF0D62031AA24D7900F2EF92 /* ProtoSwiperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D62021AA24D7900F2EF92 /* ProtoSwiperTests.m */; };
 		BF460D461AA6AFC9006C51F4 /* SwiperControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = BF460D451AA6AFC9006C51F4 /* SwiperControlBehavior.m */; };
+		BFD676401AA72A27008973A2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD6763E1AA72A27008973A2 /* Crashlytics.framework */; };
+		BFD676411AA72A27008973A2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD6763F1AA72A27008973A2 /* Fabric.framework */; };
+		BFD676601AA72FCC008973A2 /* _FBTweakArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD676441AA72FCC008973A2 /* _FBTweakArrayViewController.m */; };
+		BFD676611AA72FCC008973A2 /* _FBTweakBindObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD676461AA72FCC008973A2 /* _FBTweakBindObserver.m */; };
+		BFD676621AA72FCC008973A2 /* _FBTweakCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD676481AA72FCC008973A2 /* _FBTweakCategoryViewController.m */; };
+		BFD676631AA72FCC008973A2 /* _FBTweakCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD6764A1AA72FCC008973A2 /* _FBTweakCollectionViewController.m */; };
+		BFD676641AA72FCC008973A2 /* _FBTweakDictionaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD6764C1AA72FCC008973A2 /* _FBTweakDictionaryViewController.m */; };
+		BFD676651AA72FCC008973A2 /* _FBTweakTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD6764E1AA72FCC008973A2 /* _FBTweakTableViewCell.m */; };
+		BFD676661AA72FCC008973A2 /* FBTweak.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD676511AA72FCC008973A2 /* FBTweak.m */; };
+		BFD676671AA72FCC008973A2 /* FBTweakCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD676531AA72FCC008973A2 /* FBTweakCategory.m */; };
+		BFD676681AA72FCC008973A2 /* FBTweakCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD676551AA72FCC008973A2 /* FBTweakCollection.m */; };
+		BFD676691AA72FCC008973A2 /* FBTweakInline.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD676581AA72FCC008973A2 /* FBTweakInline.m */; };
+		BFD6766A1AA72FCC008973A2 /* FBTweakShakeWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD6765B1AA72FCC008973A2 /* FBTweakShakeWindow.m */; };
+		BFD6766B1AA72FCC008973A2 /* FBTweakStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD6765D1AA72FCC008973A2 /* FBTweakStore.m */; };
+		BFD6766C1AA72FCC008973A2 /* FBTweakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD6765F1AA72FCC008973A2 /* FBTweakViewController.m */; };
+		BFF1A7D41AA7251C00EFEBA6 /* PathView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF1A7D31AA7251C00EFEBA6 /* PathView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +59,40 @@
 		BF0D62021AA24D7900F2EF92 /* ProtoSwiperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtoSwiperTests.m; sourceTree = "<group>"; };
 		BF460D441AA6AFC9006C51F4 /* SwiperControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiperControlBehavior.h; sourceTree = "<group>"; };
 		BF460D451AA6AFC9006C51F4 /* SwiperControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiperControlBehavior.m; sourceTree = "<group>"; };
+		BFD6763E1AA72A27008973A2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		BFD6763F1AA72A27008973A2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		BFD676431AA72FCC008973A2 /* _FBTweakArrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakArrayViewController.h; sourceTree = "<group>"; };
+		BFD676441AA72FCC008973A2 /* _FBTweakArrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakArrayViewController.m; sourceTree = "<group>"; };
+		BFD676451AA72FCC008973A2 /* _FBTweakBindObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakBindObserver.h; sourceTree = "<group>"; };
+		BFD676461AA72FCC008973A2 /* _FBTweakBindObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakBindObserver.m; sourceTree = "<group>"; };
+		BFD676471AA72FCC008973A2 /* _FBTweakCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakCategoryViewController.h; sourceTree = "<group>"; };
+		BFD676481AA72FCC008973A2 /* _FBTweakCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakCategoryViewController.m; sourceTree = "<group>"; };
+		BFD676491AA72FCC008973A2 /* _FBTweakCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakCollectionViewController.h; sourceTree = "<group>"; };
+		BFD6764A1AA72FCC008973A2 /* _FBTweakCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakCollectionViewController.m; sourceTree = "<group>"; };
+		BFD6764B1AA72FCC008973A2 /* _FBTweakDictionaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakDictionaryViewController.h; sourceTree = "<group>"; };
+		BFD6764C1AA72FCC008973A2 /* _FBTweakDictionaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakDictionaryViewController.m; sourceTree = "<group>"; };
+		BFD6764D1AA72FCC008973A2 /* _FBTweakTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakTableViewCell.h; sourceTree = "<group>"; };
+		BFD6764E1AA72FCC008973A2 /* _FBTweakTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _FBTweakTableViewCell.m; sourceTree = "<group>"; };
+		BFD6764F1AA72FCC008973A2 /* FBTweak-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBTweak-Prefix.pch"; sourceTree = "<group>"; };
+		BFD676501AA72FCC008973A2 /* FBTweak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweak.h; sourceTree = "<group>"; };
+		BFD676511AA72FCC008973A2 /* FBTweak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweak.m; sourceTree = "<group>"; };
+		BFD676521AA72FCC008973A2 /* FBTweakCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakCategory.h; sourceTree = "<group>"; };
+		BFD676531AA72FCC008973A2 /* FBTweakCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakCategory.m; sourceTree = "<group>"; };
+		BFD676541AA72FCC008973A2 /* FBTweakCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakCollection.h; sourceTree = "<group>"; };
+		BFD676551AA72FCC008973A2 /* FBTweakCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakCollection.m; sourceTree = "<group>"; };
+		BFD676561AA72FCC008973A2 /* FBTweakEnabled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakEnabled.h; sourceTree = "<group>"; };
+		BFD676571AA72FCC008973A2 /* FBTweakInline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakInline.h; sourceTree = "<group>"; };
+		BFD676581AA72FCC008973A2 /* FBTweakInline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakInline.m; sourceTree = "<group>"; };
+		BFD676591AA72FCC008973A2 /* FBTweakInlineInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakInlineInternal.h; sourceTree = "<group>"; };
+		BFD6765A1AA72FCC008973A2 /* FBTweakShakeWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakShakeWindow.h; sourceTree = "<group>"; };
+		BFD6765B1AA72FCC008973A2 /* FBTweakShakeWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakShakeWindow.m; sourceTree = "<group>"; };
+		BFD6765C1AA72FCC008973A2 /* FBTweakStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakStore.h; sourceTree = "<group>"; };
+		BFD6765D1AA72FCC008973A2 /* FBTweakStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakStore.m; sourceTree = "<group>"; };
+		BFD6765E1AA72FCC008973A2 /* FBTweakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBTweakViewController.h; sourceTree = "<group>"; };
+		BFD6765F1AA72FCC008973A2 /* FBTweakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBTweakViewController.m; sourceTree = "<group>"; };
+		BFD6766D1AA73027008973A2 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		BFF1A7D21AA7251C00EFEBA6 /* PathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathView.h; sourceTree = "<group>"; };
+		BFF1A7D31AA7251C00EFEBA6 /* PathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD676401AA72A27008973A2 /* Crashlytics.framework in Frameworks */,
+				BFD676411AA72A27008973A2 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +118,7 @@
 		BF0D61DA1AA24D7900F2EF92 = {
 			isa = PBXGroup;
 			children = (
+				BFD676421AA72FCC008973A2 /* FBTweak */,
 				BF0D61E51AA24D7900F2EF92 /* ProtoSwiper */,
 				BF0D61FF1AA24D7900F2EF92 /* ProtoSwiperTests */,
 				BF0D61E41AA24D7900F2EF92 /* Products */,
@@ -88,6 +141,8 @@
 				BF0D61EB1AA24D7900F2EF92 /* AppDelegate.m */,
 				BF0D61ED1AA24D7900F2EF92 /* ViewController.h */,
 				BF0D61EE1AA24D7900F2EF92 /* ViewController.m */,
+				BFF1A7D21AA7251C00EFEBA6 /* PathView.h */,
+				BFF1A7D31AA7251C00EFEBA6 /* PathView.m */,
 				BF460D441AA6AFC9006C51F4 /* SwiperControlBehavior.h */,
 				BF460D451AA6AFC9006C51F4 /* SwiperControlBehavior.m */,
 				BF0D61F01AA24D7900F2EF92 /* Main.storyboard */,
@@ -101,6 +156,9 @@
 		BF0D61E61AA24D7900F2EF92 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BFD6766D1AA73027008973A2 /* Prefix.pch */,
+				BFD6763E1AA72A27008973A2 /* Crashlytics.framework */,
+				BFD6763F1AA72A27008973A2 /* Fabric.framework */,
 				BF0D61E71AA24D7900F2EF92 /* Info.plist */,
 				BF0D61E81AA24D7900F2EF92 /* main.m */,
 			);
@@ -124,6 +182,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BFD676421AA72FCC008973A2 /* FBTweak */ = {
+			isa = PBXGroup;
+			children = (
+				BFD676431AA72FCC008973A2 /* _FBTweakArrayViewController.h */,
+				BFD676441AA72FCC008973A2 /* _FBTweakArrayViewController.m */,
+				BFD676451AA72FCC008973A2 /* _FBTweakBindObserver.h */,
+				BFD676461AA72FCC008973A2 /* _FBTweakBindObserver.m */,
+				BFD676471AA72FCC008973A2 /* _FBTweakCategoryViewController.h */,
+				BFD676481AA72FCC008973A2 /* _FBTweakCategoryViewController.m */,
+				BFD676491AA72FCC008973A2 /* _FBTweakCollectionViewController.h */,
+				BFD6764A1AA72FCC008973A2 /* _FBTweakCollectionViewController.m */,
+				BFD6764B1AA72FCC008973A2 /* _FBTweakDictionaryViewController.h */,
+				BFD6764C1AA72FCC008973A2 /* _FBTweakDictionaryViewController.m */,
+				BFD6764D1AA72FCC008973A2 /* _FBTweakTableViewCell.h */,
+				BFD6764E1AA72FCC008973A2 /* _FBTweakTableViewCell.m */,
+				BFD6764F1AA72FCC008973A2 /* FBTweak-Prefix.pch */,
+				BFD676501AA72FCC008973A2 /* FBTweak.h */,
+				BFD676511AA72FCC008973A2 /* FBTweak.m */,
+				BFD676521AA72FCC008973A2 /* FBTweakCategory.h */,
+				BFD676531AA72FCC008973A2 /* FBTweakCategory.m */,
+				BFD676541AA72FCC008973A2 /* FBTweakCollection.h */,
+				BFD676551AA72FCC008973A2 /* FBTweakCollection.m */,
+				BFD676561AA72FCC008973A2 /* FBTweakEnabled.h */,
+				BFD676571AA72FCC008973A2 /* FBTweakInline.h */,
+				BFD676581AA72FCC008973A2 /* FBTweakInline.m */,
+				BFD676591AA72FCC008973A2 /* FBTweakInlineInternal.h */,
+				BFD6765A1AA72FCC008973A2 /* FBTweakShakeWindow.h */,
+				BFD6765B1AA72FCC008973A2 /* FBTweakShakeWindow.m */,
+				BFD6765C1AA72FCC008973A2 /* FBTweakStore.h */,
+				BFD6765D1AA72FCC008973A2 /* FBTweakStore.m */,
+				BFD6765E1AA72FCC008973A2 /* FBTweakViewController.h */,
+				BFD6765F1AA72FCC008973A2 /* FBTweakViewController.m */,
+			);
+			name = FBTweak;
+			path = Tweaks/FBTweak;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +229,7 @@
 				BF0D61DF1AA24D7900F2EF92 /* Sources */,
 				BF0D61E01AA24D7900F2EF92 /* Frameworks */,
 				BF0D61E11AA24D7900F2EF92 /* Resources */,
+				BFD6763D1AA72A05008973A2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -219,14 +315,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BFD6763D1AA72A05008973A2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 310ad8749b4677ca55a26218552115c58d56ed64 64e819e70aa93574feabaa2cb806075cb6a0a0ba844e4228125ab707abefee13";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF0D61DF1AA24D7900F2EF92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFD676651AA72FCC008973A2 /* _FBTweakTableViewCell.m in Sources */,
 				BF0D61EF1AA24D7900F2EF92 /* ViewController.m in Sources */,
+				BFD676631AA72FCC008973A2 /* _FBTweakCollectionViewController.m in Sources */,
+				BFF1A7D41AA7251C00EFEBA6 /* PathView.m in Sources */,
+				BFD676681AA72FCC008973A2 /* FBTweakCollection.m in Sources */,
+				BFD6766C1AA72FCC008973A2 /* FBTweakViewController.m in Sources */,
 				BF460D461AA6AFC9006C51F4 /* SwiperControlBehavior.m in Sources */,
+				BFD6766B1AA72FCC008973A2 /* FBTweakStore.m in Sources */,
+				BFD676601AA72FCC008973A2 /* _FBTweakArrayViewController.m in Sources */,
+				BFD6766A1AA72FCC008973A2 /* FBTweakShakeWindow.m in Sources */,
+				BFD676691AA72FCC008973A2 /* FBTweakInline.m in Sources */,
 				BF0D61EC1AA24D7900F2EF92 /* AppDelegate.m in Sources */,
+				BFD676671AA72FCC008973A2 /* FBTweakCategory.m in Sources */,
+				BFD676611AA72FCC008973A2 /* _FBTweakBindObserver.m in Sources */,
+				BFD676661AA72FCC008973A2 /* FBTweak.m in Sources */,
+				BFD676641AA72FCC008973A2 /* _FBTweakDictionaryViewController.m in Sources */,
+				BFD676621AA72FCC008973A2 /* _FBTweakCategoryViewController.m in Sources */,
 				BF0D61E91AA24D7900F2EF92 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +476,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Aditya Krishnadevan (PG344QZUY3)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ProtoSwiper/Prefix.pch";
 				INFOPLIST_FILE = ProtoSwiper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -361,9 +492,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Aditya Krishnadevan (2C88P4J89F)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ProtoSwiper/Prefix.pch";
 				INFOPLIST_FILE = ProtoSwiper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "105a4d04-9523-4731-98c2-a20c67e9516b";
 			};
 			name = Release;
 		};
