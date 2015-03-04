@@ -36,9 +36,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.hideControlViews = FBTweakValue(@"Adjustments", @"Control Views", @"hidden", YES);
-    FBTweakBind(self, hideControlViews, @"Adjustments", @"Control Views", @"hidden", YES);
-
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     _animator2 = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     
@@ -49,18 +46,21 @@
     [self.view addSubview:_bottomView];
     [self.view addSubview:_middleView];
     
+    FBTweakBind(self, hideControlViews, @"Adjustments", @"Control Views", @"hidden", YES);
+    
     SwiperControlBehavior *topControlBehavior = [[SwiperControlBehavior alloc] initWithItem:_topView attachedToItem:_middleView pullDirection:(CGVector){0, -1.0}];
     SwiperControlBehavior *bottomControlBehavior = [[SwiperControlBehavior alloc] initWithItem:_bottomView attachedToItem:_middleView pullDirection:(CGVector){0, 1.0}];
-    [_animator addBehavior:topControlBehavior];
-    [_animator2 addBehavior:bottomControlBehavior];
-    
+
     _middleAnchorBottom = [[UIAttachmentBehavior alloc] initWithItem:_middleView attachedToAnchor:(CGPoint){200, 200}];
     _middleAnchorBottom.length = 0.0;
-    [_animator addBehavior:_middleAnchorBottom];
     
     _middleAnchorTop = [[UIAttachmentBehavior alloc] initWithItem:_middleView attachedToAnchor:(CGPoint){200, 200}];
     _middleAnchorTop.length = 0.0;
+    
+    [_animator addBehavior:topControlBehavior];
+    [_animator2 addBehavior:bottomControlBehavior];
     [_animator2 addBehavior:_middleAnchorTop];
+    [_animator addBehavior:_middleAnchorBottom];
     
     _recognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panned:)];
     [self.view addGestureRecognizer:_recognizer];
