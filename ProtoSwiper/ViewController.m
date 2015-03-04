@@ -27,12 +27,16 @@
     UIAttachmentBehavior *_middleAnchorBottom, *_middleAnchorTop;
     PathView *_pathView;
 }
+@property (nonatomic, assign) BOOL hideControlViews;
 @end
 
 @implementation ViewController
 
+#pragma mark - Setup
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    FBTweakBind(self, hideControlViews, @"Adjustments", @"Control Views", @"hidden", YES);
 
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     _animator2 = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
@@ -68,15 +72,23 @@
     [self.view addSubview:_pathView];
 }
 
+#pragma mark - Setter Override
+- (void)setHideControlViews:(BOOL)hideControlViews {
+    _hideControlViews = hideControlViews;
+    _topView.hidden = _middleView.hidden = _bottomView.hidden = hideControlViews;
+}
+
+#pragma mark - Pan Handling (lol)
 - (void)panned:(UIPanGestureRecognizer *)gestureRecognizer {
     _middleAnchorBottom.anchorPoint = _middleAnchorTop.anchorPoint = [gestureRecognizer locationInView:self.view];
 }
 
+#pragma mark - Display Update Callback
 - (void)displayTick:(CADisplayLink *)link {
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:(CGPoint){_topView.center.x, 0}];
     [path addQuadCurveToPoint:(CGPoint){_bottomView.center.x, CGRectGetMaxY(self.view.bounds)} controlPoint:_middleView.center];
-    _pathView.path = path;
+    [_pathView setPath:path startPoint:(CGPoint){_topView.center.x, 0}];
 }
 
 @end

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PathView : UIView
-@property (nonatomic, strong) UIBezierPath *path;
+- (void)setPath:(UIBezierPath *)path startPoint:(CGPoint)point;
 @end

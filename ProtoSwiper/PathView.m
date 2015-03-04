@@ -8,16 +8,26 @@
 
 #import "PathView.h"
 
-@implementation PathView
+@implementation PathView {
+    UIBezierPath *_path;
+}
 
-- (void)setPath:(UIBezierPath *)path {
+- (void)setPath:(UIBezierPath *)path startPoint:(CGPoint)startPoint {
     _path = path;
+    UIBezierPath *newPath = [UIBezierPath bezierPath];
+    [newPath moveToPoint:_path.currentPoint];
+    [newPath addLineToPoint:(CGPoint){CGRectGetMaxX(self.bounds), CGRectGetMaxY(self.bounds)}];
+    [newPath addLineToPoint:(CGPoint){CGRectGetMaxX(self.bounds), CGRectGetMinY(self.bounds)}];
+    [newPath addLineToPoint:startPoint];
+    [_path appendPath:newPath];
     [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect {
     [[UIColor redColor] setStroke];
+    [[UIColor orangeColor] setFill];
     [_path stroke];
+    [_path fill];
 }
 
 @end
