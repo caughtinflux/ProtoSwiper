@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SwiperControlBehavior.h"
+#import "PathView.h"
 
 @interface UIView (ICCat)
 @property (nonatomic, readonly) CGPoint internalCenter;
@@ -24,14 +25,14 @@
     UIView *_topView, *_bottomView, *_middleView;
     UIPanGestureRecognizer *_recognizer;
     UIAttachmentBehavior *_middleAnchorBottom, *_middleAnchorTop;
-    UIImageView *_imageView;
+    PathView *_pathView;
 }
 @end
 
 @implementation ViewController
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewDidLoad {
+    [super viewDidLoad];
 
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     _animator2 = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
@@ -62,8 +63,9 @@
     CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(displayTick:)];
     [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     
-    _imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:_imageView];
+    _pathView = [[PathView alloc] initWithFrame:self.view.bounds];
+    _pathView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:_pathView];
 }
 
 - (void)panned:(UIPanGestureRecognizer *)gestureRecognizer {
@@ -74,16 +76,7 @@
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:(CGPoint){_topView.center.x, 0}];
     [path addQuadCurveToPoint:(CGPoint){_bottomView.center.x, CGRectGetMaxY(self.view.bounds)} controlPoint:_middleView.center];
-    _imageView.image = [self createImageFromPath:path];
-}
-
-- (UIImage *)createImageFromPath:(UIBezierPath *)path {
-    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, NO, 0);
-    [[UIColor redColor] setStroke];
-    [path stroke];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
+    _pathView.path = path;
 }
 
 @end
