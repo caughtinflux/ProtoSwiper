@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  ProtoSwiper
+//
+//  Created by Aditya KD on 04/03/15.
+//  Copyright (c) 2015 Aditya KD. All rights reserved.
+//
+
+#ifndef ProtoSwiper_PrefixHeader_pch
+#define ProtoSwiper_PrefixHeader_pch
+
+@import UIKit;
+
+#define FB_TWEAK_ENABLED 1
+#import "FBTweakInline.h"
+
+#endif

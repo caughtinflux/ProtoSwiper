@@ -7,16 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "FBTweakShakeWindow.h"
 
-@interface AppDelegate ()
-
-@end
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @implementation AppDelegate
 
+- (UIWindow *)window {
+    if (!_window) {
+        _window = [[FBTweakShakeWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    }
+    return _window;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [Fabric with:@[CrashlyticsKit]];
     return YES;
 }
 
@@ -43,3 +49,4 @@
 }
 
 @end
+
