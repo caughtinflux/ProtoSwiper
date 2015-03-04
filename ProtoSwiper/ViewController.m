@@ -36,6 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.hideControlViews = FBTweakValue(@"Adjustments", @"Control Views", @"hidden", YES);
     FBTweakBind(self, hideControlViews, @"Adjustments", @"Control Views", @"hidden", YES);
 
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
