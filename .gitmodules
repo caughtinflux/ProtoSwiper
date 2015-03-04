@@ -1,0 +1,3 @@
+[submodule "Tweaks"]
+	path = Tweaks
+	url = https://github.com/facebook/Tweaks.git
