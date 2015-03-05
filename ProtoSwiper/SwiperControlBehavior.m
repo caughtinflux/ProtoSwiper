@@ -8,8 +8,7 @@
 
 #import "SwiperControlBehavior.h"
 
-@implementation SwiperControlBehavior
-{
+@implementation SwiperControlBehavior {
     UIAttachmentBehavior *_attachment;
     UIGravityBehavior *_gravity;
     UIDynamicItemBehavior *_itemBehavior;
@@ -28,7 +27,7 @@
         FBTweakBind(_itemBehavior, density, @"Adjustments", @"Physics", @"square density", 5.0);
         FBTweakBind(_itemBehavior, friction, @"Adjustments", @"Physics", @"square friction", 42.0);
         FBTweakBind(_itemBehavior, resistance, @"Adjustments", @"Physics", @"square resistance", 23.00);
-        
+
         [self addChildBehavior:_attachment];
         [self addChildBehavior:_gravity];
         [self addChildBehavior:_itemBehavior];
@@ -38,8 +37,7 @@
 
 - (void)willMoveToAnimator:(UIDynamicAnimator *)dynamicAnimator {
     [super willMoveToAnimator:dynamicAnimator];
-    
-    // For some reason, these values need to be force-set on the behaviours on moving to the animator
+//  For some reason, these values need to be force-set on the behaviours on moving to the animator
     _attachment.length = FBTweakValue(@"Adjustments", @"Curve control", @"attachment length", 300.0);
     _gravity.magnitude = FBTweakValue(@"Adjustments", @"Physics", @"gravity", 88.0);
     _itemBehavior.density = FBTweakValue(@"Adjustments", @"Physics", @"square density", 5.0);

@@ -20,7 +20,7 @@
 }
 @end
 
-@interface ViewController () {
+@interface ViewController () <UIDynamicAnimatorDelegate> {
     UIDynamicAnimator *_animator, *_animator2;
     UIView *_topView, *_bottomView, *_middleView;
     UIPanGestureRecognizer *_recognizer;
@@ -41,7 +41,7 @@
     
     _topView = [[UIView alloc] initWithFrame:(CGRect){0, 0, 20, 20}]; _topView.backgroundColor = [UIColor yellowColor];
     _bottomView = [[UIView alloc] initWithFrame:(CGRect){0, 0, 20, 20}]; _bottomView.backgroundColor = [UIColor redColor];
-    _middleView = [[UIView alloc] initWithFrame:(CGRect){100, 200, 20, 20}]; _middleView.backgroundColor = [UIColor greenColor];
+    _middleView = [[UIView alloc] initWithFrame:(CGRect){CGRectGetMaxX(self.view.bounds) + 50, 333, 20, 20}]; _middleView.backgroundColor = [UIColor greenColor];
     [self.view addSubview:_topView];
     [self.view addSubview:_bottomView];
     [self.view addSubview:_middleView];
@@ -51,10 +51,10 @@
     SwiperControlBehavior *topControlBehavior = [[SwiperControlBehavior alloc] initWithItem:_topView attachedToItem:_middleView pullDirection:(CGVector){0, -1.0}];
     SwiperControlBehavior *bottomControlBehavior = [[SwiperControlBehavior alloc] initWithItem:_bottomView attachedToItem:_middleView pullDirection:(CGVector){0, 1.0}];
 
-    _middleAnchorBottom = [[UIAttachmentBehavior alloc] initWithItem:_middleView attachedToAnchor:(CGPoint){200, 200}];
+    _middleAnchorBottom = [[UIAttachmentBehavior alloc] initWithItem:_middleView attachedToAnchor:_middleView.center];
     _middleAnchorBottom.length = 0.0;
     
-    _middleAnchorTop = [[UIAttachmentBehavior alloc] initWithItem:_middleView attachedToAnchor:(CGPoint){200, 200}];
+    _middleAnchorTop = [[UIAttachmentBehavior alloc] initWithItem:_middleView attachedToAnchor:_middleView.center];
     _middleAnchorTop.length = 0.0;
     
     [_animator addBehavior:topControlBehavior];
@@ -81,14 +81,30 @@
 
 #pragma mark - Pan Handling (lol)
 - (void)panned:(UIPanGestureRecognizer *)gestureRecognizer {
-    _middleAnchorBottom.anchorPoint = _middleAnchorTop.anchorPoint = [gestureRecognizer locationInView:self.view];
+    CGPoint location = [gestureRecognizer locationInView:self.view];
+    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
+        _middleAnchorBottom.anchorPoint = _middleAnchorTop.anchorPoint = location;
+    }
+    else {
+        CGPoint newAnchor = CGPointZero;
+        if (location.x < self.view.internalCenter.x) {
+            newAnchor = (CGPoint){0, self.view.internalCenter.y};
+        }
+        else {
+            newAnchor = (CGPoint){CGRectGetMaxX(self.view.bounds), self.view.internalCenter.y};
+        }
+        _middleAnchorBottom.anchorPoint = _middleAnchorTop.anchorPoint = newAnchor;
+    }
 }
 
 #pragma mark - Display Update Callback
 - (void)displayTick:(CADisplayLink *)link {
     UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:(CGPoint){_topView.center.x, 0}];
-    [path addQuadCurveToPoint:(CGPoint){_bottomView.center.x, CGRectGetMaxY(self.view.bounds)} controlPoint:_middleView.center];
+    CGPoint startPoint = (CGPoint){_topView.center.x, 0};
+    CGPoint endPoint = (CGPoint){_bottomView.center.x, CGRectGetMaxY(self.view.bounds)};
+    CGPoint midPoint = _middleView.center;
+    [path moveToPoint:startPoint];
+    [path addQuadCurveToPoint:endPoint controlPoint:midPoint];
     [_pathView setPath:path startPoint:(CGPoint){_topView.center.x, 0}];
 }
 

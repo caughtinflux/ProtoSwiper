@@ -20,6 +20,8 @@
     [newPath addLineToPoint:(CGPoint){CGRectGetMaxX(self.bounds), CGRectGetMinY(self.bounds)}];
     [newPath addLineToPoint:startPoint];
     [_path appendPath:newPath];
+    
+    
     [self setNeedsDisplay];
 }
 
