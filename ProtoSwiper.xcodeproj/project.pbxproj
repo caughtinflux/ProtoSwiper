@@ -17,7 +17,7 @@
 		BF460D461AA6AFC9006C51F4 /* SwiperControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = BF460D451AA6AFC9006C51F4 /* SwiperControlBehavior.m */; };
 		BFAAA57B1AA97CC40032F6AE /* PBJGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAAA5711AA97CC40032F6AE /* PBJGLProgram.m */; };
 		BFAAA57C1AA97CC40032F6AE /* PBJMediaWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAAA5731AA97CC40032F6AE /* PBJMediaWriter.m */; };
-		BFAAA57D1AA97CC40032F6AE /* PBJVision.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAAA5751AA97CC40032F6AE /* PBJVision.m */; };
+		BFAAA57D1AA97CC40032F6AE /* PBJVision.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAAA5751AA97CC40032F6AE /* PBJVision.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		BFAAA57E1AA97CC40032F6AE /* PBJVisionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAAA5771AA97CC40032F6AE /* PBJVisionUtilities.m */; };
 		BFAAA57F1AA97CC40032F6AE /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BFAAA5791AA97CC40032F6AE /* Shader.fsh */; };
 		BFAAA5801AA97CC40032F6AE /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BFAAA57A1AA97CC40032F6AE /* Shader.vsh */; };

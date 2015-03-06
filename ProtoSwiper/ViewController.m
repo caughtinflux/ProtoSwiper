@@ -97,11 +97,9 @@
 - (void)setupImageViewAndMask {
     _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AnImage"]];
     [self.view addSubview:_imageView];
-    
     _pathView = [[PathView alloc] initWithFrame:self.view.bounds];
     _pathView.backgroundColor = [UIColor clearColor];
     _imageView.layer.mask = _pathView.layer;
-//    [self.view addSubview:_pathView];
 }
 
 #pragma mark - Setter Override
@@ -112,11 +110,16 @@
 
 #pragma mark - Pan Handling (lol)
 - (void)panned:(UIPanGestureRecognizer *)gestureRecognizer {
-    CGPoint location = [gestureRecognizer locationInView:self.view];
     if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
-        _middleAnchorBottom.anchorPoint = _middleAnchorTop.anchorPoint = location;
+        CGPoint translation = [gestureRecognizer translationInView:self.view];
+        [gestureRecognizer setTranslation:CGPointZero inView:self.view];
+        CGPoint anchor = _middleAnchorBottom.anchorPoint;
+        anchor.x += translation.x;
+        anchor.y += translation.y;
+        _middleAnchorBottom.anchorPoint = _middleAnchorTop.anchorPoint = anchor;
     }
     else {
+        CGPoint location = _middleView.center;
         CGPoint newAnchor = CGPointZero;
         if (location.x < self.view.internalCenter.x) {
             newAnchor = (CGPoint){0, self.view.internalCenter.y};
