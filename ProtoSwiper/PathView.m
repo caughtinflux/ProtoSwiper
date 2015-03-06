@@ -24,9 +24,7 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    [[UIColor blackColor] setStroke];
-    [[UIColor orangeColor] setFill];
-    [_path stroke];
+    [[UIColor redColor] setFill];
     [_path fill];
 }
 
