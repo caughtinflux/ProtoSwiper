@@ -11,6 +11,8 @@
 #import "PathView.h"
 #import "PBJVision.h"
 
+@import AVFoundation;
+
 @interface UIView (ICCat)
 @property (nonatomic, readonly) CGPoint internalCenter;
 @end
@@ -82,10 +84,13 @@
     vision.cameraMode = PBJCameraModeVideo;
     vision.cameraOrientation = PBJCameraOrientationPortrait;
     vision.focusMode = PBJFocusModeContinuousAutoFocus;
-    vision.outputFormat = PBJOutputFormatSquare;
+    vision.outputFormat = PBJOutputFormatStandard;
     [vision startPreview];
-    [PBJVision sharedInstance].previewLayer.frame = self.view.bounds;
-    [self.view.layer addSublayer:[PBJVision sharedInstance].previewLayer];
+    AVCaptureVideoPreviewLayer *previewLayer = [PBJVision sharedInstance].previewLayer;
+    previewLayer.frame = self.view.bounds;
+    previewLayer.backgroundColor = [UIColor redColor].CGColor;
+    previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    [self.view.layer addSublayer:previewLayer];
 }
 
 #pragma mark - Setter Override
