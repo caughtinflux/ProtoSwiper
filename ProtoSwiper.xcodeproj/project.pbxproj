@@ -15,6 +15,12 @@
 		BF0D61F71AA24D7900F2EF92 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF0D61F51AA24D7900F2EF92 /* LaunchScreen.xib */; };
 		BF0D62031AA24D7900F2EF92 /* ProtoSwiperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0D62021AA24D7900F2EF92 /* ProtoSwiperTests.m */; };
 		BF460D461AA6AFC9006C51F4 /* SwiperControlBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = BF460D451AA6AFC9006C51F4 /* SwiperControlBehavior.m */; };
+		BFAAA57B1AA97CC40032F6AE /* PBJGLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAAA5711AA97CC40032F6AE /* PBJGLProgram.m */; };
+		BFAAA57C1AA97CC40032F6AE /* PBJMediaWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAAA5731AA97CC40032F6AE /* PBJMediaWriter.m */; };
+		BFAAA57D1AA97CC40032F6AE /* PBJVision.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAAA5751AA97CC40032F6AE /* PBJVision.m */; };
+		BFAAA57E1AA97CC40032F6AE /* PBJVisionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BFAAA5771AA97CC40032F6AE /* PBJVisionUtilities.m */; };
+		BFAAA57F1AA97CC40032F6AE /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = BFAAA5791AA97CC40032F6AE /* Shader.fsh */; };
+		BFAAA5801AA97CC40032F6AE /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = BFAAA57A1AA97CC40032F6AE /* Shader.vsh */; };
 		BFD676401AA72A27008973A2 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD6763E1AA72A27008973A2 /* Crashlytics.framework */; };
 		BFD676411AA72A27008973A2 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD6763F1AA72A27008973A2 /* Fabric.framework */; };
 		BFD676601AA72FCC008973A2 /* _FBTweakArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD676441AA72FCC008973A2 /* _FBTweakArrayViewController.m */; };
@@ -59,6 +65,16 @@
 		BF0D62021AA24D7900F2EF92 /* ProtoSwiperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtoSwiperTests.m; sourceTree = "<group>"; };
 		BF460D441AA6AFC9006C51F4 /* SwiperControlBehavior.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiperControlBehavior.h; sourceTree = "<group>"; };
 		BF460D451AA6AFC9006C51F4 /* SwiperControlBehavior.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiperControlBehavior.m; sourceTree = "<group>"; };
+		BFAAA5701AA97CC40032F6AE /* PBJGLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJGLProgram.h; sourceTree = "<group>"; };
+		BFAAA5711AA97CC40032F6AE /* PBJGLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJGLProgram.m; sourceTree = "<group>"; };
+		BFAAA5721AA97CC40032F6AE /* PBJMediaWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJMediaWriter.h; sourceTree = "<group>"; };
+		BFAAA5731AA97CC40032F6AE /* PBJMediaWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJMediaWriter.m; sourceTree = "<group>"; };
+		BFAAA5741AA97CC40032F6AE /* PBJVision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJVision.h; sourceTree = "<group>"; };
+		BFAAA5751AA97CC40032F6AE /* PBJVision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJVision.m; sourceTree = "<group>"; };
+		BFAAA5761AA97CC40032F6AE /* PBJVisionUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBJVisionUtilities.h; sourceTree = "<group>"; };
+		BFAAA5771AA97CC40032F6AE /* PBJVisionUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBJVisionUtilities.m; sourceTree = "<group>"; };
+		BFAAA5791AA97CC40032F6AE /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		BFAAA57A1AA97CC40032F6AE /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
 		BFD6763E1AA72A27008973A2 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		BFD6763F1AA72A27008973A2 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		BFD676431AA72FCC008973A2 /* _FBTweakArrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _FBTweakArrayViewController.h; sourceTree = "<group>"; };
@@ -118,6 +134,7 @@
 		BF0D61DA1AA24D7900F2EF92 = {
 			isa = PBXGroup;
 			children = (
+				BFAAA56F1AA97CC40032F6AE /* PBJVision */,
 				BFD676421AA72FCC008973A2 /* FBTweak */,
 				BF0D61E51AA24D7900F2EF92 /* ProtoSwiper */,
 				BF0D61FF1AA24D7900F2EF92 /* ProtoSwiperTests */,
@@ -180,6 +197,32 @@
 				BF0D62011AA24D7900F2EF92 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFAAA56F1AA97CC40032F6AE /* PBJVision */ = {
+			isa = PBXGroup;
+			children = (
+				BFAAA5701AA97CC40032F6AE /* PBJGLProgram.h */,
+				BFAAA5711AA97CC40032F6AE /* PBJGLProgram.m */,
+				BFAAA5721AA97CC40032F6AE /* PBJMediaWriter.h */,
+				BFAAA5731AA97CC40032F6AE /* PBJMediaWriter.m */,
+				BFAAA5741AA97CC40032F6AE /* PBJVision.h */,
+				BFAAA5751AA97CC40032F6AE /* PBJVision.m */,
+				BFAAA5761AA97CC40032F6AE /* PBJVisionUtilities.h */,
+				BFAAA5771AA97CC40032F6AE /* PBJVisionUtilities.m */,
+				BFAAA5781AA97CC40032F6AE /* Shaders */,
+			);
+			name = PBJVision;
+			path = PBJVision/Source;
+			sourceTree = "<group>";
+		};
+		BFAAA5781AA97CC40032F6AE /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				BFAAA5791AA97CC40032F6AE /* Shader.fsh */,
+				BFAAA57A1AA97CC40032F6AE /* Shader.vsh */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 		BFD676421AA72FCC008973A2 /* FBTweak */ = {
@@ -300,9 +343,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFAAA57F1AA97CC40032F6AE /* Shader.fsh in Resources */,
 				BF0D61F21AA24D7900F2EF92 /* Main.storyboard in Resources */,
 				BF0D61F71AA24D7900F2EF92 /* LaunchScreen.xib in Resources */,
 				BF0D61F41AA24D7900F2EF92 /* Images.xcassets in Resources */,
+				BFAAA5801AA97CC40032F6AE /* Shader.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,15 +384,19 @@
 				BFD676651AA72FCC008973A2 /* _FBTweakTableViewCell.m in Sources */,
 				BF0D61EF1AA24D7900F2EF92 /* ViewController.m in Sources */,
 				BFD676631AA72FCC008973A2 /* _FBTweakCollectionViewController.m in Sources */,
+				BFAAA57E1AA97CC40032F6AE /* PBJVisionUtilities.m in Sources */,
 				BFF1A7D41AA7251C00EFEBA6 /* PathView.m in Sources */,
 				BFD676681AA72FCC008973A2 /* FBTweakCollection.m in Sources */,
 				BFD6766C1AA72FCC008973A2 /* FBTweakViewController.m in Sources */,
 				BF460D461AA6AFC9006C51F4 /* SwiperControlBehavior.m in Sources */,
 				BFD6766B1AA72FCC008973A2 /* FBTweakStore.m in Sources */,
+				BFAAA57C1AA97CC40032F6AE /* PBJMediaWriter.m in Sources */,
 				BFD676601AA72FCC008973A2 /* _FBTweakArrayViewController.m in Sources */,
 				BFD6766A1AA72FCC008973A2 /* FBTweakShakeWindow.m in Sources */,
 				BFD676691AA72FCC008973A2 /* FBTweakInline.m in Sources */,
 				BF0D61EC1AA24D7900F2EF92 /* AppDelegate.m in Sources */,
+				BFAAA57D1AA97CC40032F6AE /* PBJVision.m in Sources */,
+				BFAAA57B1AA97CC40032F6AE /* PBJGLProgram.m in Sources */,
 				BFD676671AA72FCC008973A2 /* FBTweakCategory.m in Sources */,
 				BFD676611AA72FCC008973A2 /* _FBTweakBindObserver.m in Sources */,
 				BFD676661AA72FCC008973A2 /* FBTweak.m in Sources */,
