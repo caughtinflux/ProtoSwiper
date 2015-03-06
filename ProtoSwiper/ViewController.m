@@ -17,6 +17,13 @@
 @property (nonatomic, readonly) CGPoint internalCenter;
 @end
 
+static inline CGPoint GetControlPointForQuadBezier(CGPoint start, CGPoint end, CGPoint mid) {
+    CGPoint ctrl = CGPointZero;
+    ctrl.x = -(((.25 * start.x) + (0.25 * end.x) - mid.x) / 0.5);
+    ctrl.y = -(((.25 * start.y) + (0.25 * end.y) - mid.y) / 0.5);
+    return ctrl;
+}
+
 @implementation UIView (ICCat)
 - (CGPoint)internalCenter {
     return (CGPoint){CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds)};
@@ -32,6 +39,7 @@
     UIImageView *_imageView;
 }
 @property (nonatomic, assign) BOOL hideControlViews;
+@property (nonatomic, assign) CGFloat imageOffset;
 @end
 
 @implementation ViewController
@@ -95,6 +103,8 @@
 }
 
 - (void)setupImageViewAndMask {
+    FBTweakBind(self, imageOffset, @"Adjustments", @"Image View", @"offset", 50);
+    
     _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AnImage"]];
     _imageView.contentMode = UIViewContentModeLeft;
     [self.view addSubview:_imageView];
@@ -134,18 +144,20 @@
     }
 }
 
+#define MIN3(_a, _b, _c) (MIN(_a, _b) < MIN(_a, _c) ? MIN(_a, _b) : MIN(_a, _c))
+
 #pragma mark - Display Update Callback
 - (void)displayTick:(CADisplayLink *)link {
     UIBezierPath *path = [UIBezierPath bezierPath];
     CGPoint startPoint = [self.view convertPoint:(CGPoint){_topView.center.x, 0} toView:_imageView];
     CGPoint endPoint = [self.view convertPoint:(CGPoint){_bottomView.center.x, CGRectGetMaxY(self.view.bounds)} toView:_imageView];
     CGPoint midPoint = [self.view convertPoint:_middleView.center toView:_imageView];
-    
+    CGPoint controlPoint = GetControlPointForQuadBezier(startPoint, endPoint, midPoint);
     [path moveToPoint:startPoint];
-    [path addQuadCurveToPoint:endPoint controlPoint:midPoint];
+    [path addQuadCurveToPoint:endPoint controlPoint:controlPoint];
     
     CGRect frame = _imageView.frame;
-    frame.origin.x = fmax(_middleView.center.x - 50, 0);
+    frame.origin.x = fmax(MIN3(_topView.center.x, _bottomView.center.x, _middleView.center.x) - self.imageOffset, 0);
     _imageView.frame = frame;
     frame.size.width = (CGRectGetWidth(self.view.bounds) - _middleView.center.x);
     _pathView.frame = _imageView.bounds;
