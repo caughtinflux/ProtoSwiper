@@ -20,13 +20,11 @@
     [newPath addLineToPoint:(CGPoint){CGRectGetMaxX(self.bounds), CGRectGetMinY(self.bounds)}];
     [newPath addLineToPoint:startPoint];
     [_path appendPath:newPath];
-    
-    
     [self setNeedsDisplay];
 }
 
 - (void)drawRect:(CGRect)rect {
-    [[UIColor redColor] setStroke];
+    [[UIColor blackColor] setStroke];
     [[UIColor orangeColor] setFill];
     [_path stroke];
     [_path fill];
