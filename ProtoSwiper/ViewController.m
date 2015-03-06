@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SwiperControlBehavior.h"
 #import "PathView.h"
+#import "PBJVision.h"
 
 @interface UIView (ICCat)
 @property (nonatomic, readonly) CGPoint internalCenter;
@@ -35,6 +36,8 @@
 #pragma mark - Setup
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setupPreview];
     
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
     _animator2 = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
@@ -71,6 +74,18 @@
     _pathView = [[PathView alloc] initWithFrame:self.view.bounds];
     _pathView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_pathView];
+}
+
+#pragma mark - Setup
+- (void)setupPreview {
+    PBJVision *vision = [PBJVision sharedInstance];
+    vision.cameraMode = PBJCameraModeVideo;
+    vision.cameraOrientation = PBJCameraOrientationPortrait;
+    vision.focusMode = PBJFocusModeContinuousAutoFocus;
+    vision.outputFormat = PBJOutputFormatSquare;
+    [vision startPreview];
+    [PBJVision sharedInstance].previewLayer.frame = self.view.bounds;
+    [self.view.layer addSublayer:[PBJVision sharedInstance].previewLayer];
 }
 
 #pragma mark - Setter Override
