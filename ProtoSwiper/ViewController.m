@@ -41,6 +41,7 @@ static inline CGPoint GetControlPointForQuadBezier(CGPoint start, CGPoint end, C
 }
 @property (nonatomic, assign) BOOL hideControlViews;
 @property (nonatomic, assign) CGFloat imageOffset;
+@property (nonatomic, assign) BOOL allowFancyStuff;
 @end
 
 @implementation ViewController
@@ -105,6 +106,7 @@ static inline CGPoint GetControlPointForQuadBezier(CGPoint start, CGPoint end, C
 
 - (void)setupImageViewAndMask {
     FBTweakBind(self, imageOffset, @"Adjustments", @"Image View", @"offset", 50);
+    FBTweakBind(self, allowFancyStuff, @"Adjustments", @"Fancy Stuff", @"allowed", YES);
     
     _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"AnImage"]];
     _imageView.contentMode = UIViewContentModeLeft;
@@ -113,7 +115,6 @@ static inline CGPoint GetControlPointForQuadBezier(CGPoint start, CGPoint end, C
     _pathView = [[PathView alloc] initWithFrame:self.view.bounds];
     _pathView.backgroundColor = [UIColor clearColor];
     _imageView.layer.mask = _pathView.layer;
-//    [self.view addSubview:_pathView];
 }
 
 #pragma mark - Setter Override
@@ -163,7 +164,8 @@ static inline CGPoint GetControlPointForQuadBezier(CGPoint start, CGPoint end, C
     [path addQuadCurveToPoint:endPoint controlPoint:controlPoint];
 
     CGRect frame = _imageView.frame;
-    frame.origin.x = fmax(MIN3(_topView.center.x, _bottomView.center.x, _middleView.center.x) - self.imageOffset, 0);
+    CGFloat org = (_allowFancyStuff ? MIN3(_topView.center.x, _bottomView.center.x, _middleView.center.x) : _bottomView.center.x);
+    frame.origin.x = fmax(org - self.imageOffset, 0);
     _imageView.frame = frame;
     frame.size.width = (CGRectGetWidth(self.view.bounds) - _middleView.center.x);
     _pathView.frame = _imageView.bounds;
@@ -172,7 +174,8 @@ static inline CGPoint GetControlPointForQuadBezier(CGPoint start, CGPoint end, C
     [CATransaction begin];
     [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
     CGPoint previewOrigin = _previewLayer.frame.origin;
-    previewOrigin.x = fmin(MAX3(_topView.center.x, _bottomView.center.x, _middleView.center.x) - CGRectGetWidth(self.view.bounds), 0);
+    org = (_allowFancyStuff ? MAX3(_topView.center.x, _bottomView.center.x, _middleView.center.x) : _middleView.center.x);
+    previewOrigin.x = fmin(org - CGRectGetWidth(self.view.bounds), 0);
     _previewLayer.frame = (CGRect){previewOrigin, _previewLayer.frame.size};
     [CATransaction commit];
 }
