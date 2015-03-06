@@ -1,3 +1,6 @@
 [submodule "Tweaks"]
 	path = Tweaks
 	url = https://github.com/facebook/Tweaks.git
+[submodule "PBJVision"]
+	path = PBJVision
+	url = https://github.com/piemonte/PBJVision.git
