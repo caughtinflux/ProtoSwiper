@@ -37,6 +37,7 @@ static inline CGPoint GetControlPointForQuadBezier(CGPoint start, CGPoint end, C
     UIAttachmentBehavior *_middleAnchorBottom, *_middleAnchorTop;
     PathView *_pathView;
     UIImageView *_imageView;
+    AVCaptureVideoPreviewLayer *_previewLayer;
 }
 @property (nonatomic, assign) BOOL hideControlViews;
 @property (nonatomic, assign) CGFloat imageOffset;
@@ -67,11 +68,11 @@ static inline CGPoint GetControlPointForQuadBezier(CGPoint start, CGPoint end, C
     vision.focusMode = PBJFocusModeContinuousAutoFocus;
     vision.outputFormat = PBJOutputFormatStandard;
     [vision startPreview];
-    AVCaptureVideoPreviewLayer *previewLayer = [PBJVision sharedInstance].previewLayer;
-    previewLayer.frame = self.view.bounds;
-    previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    previewLayer.backgroundColor = [UIColor blackColor].CGColor;
-    [self.view.layer addSublayer:previewLayer];
+    _previewLayer = [PBJVision sharedInstance].previewLayer;
+    _previewLayer.frame = self.view.bounds;
+    _previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    _previewLayer.backgroundColor = [UIColor blackColor].CGColor;
+    [self.view.layer addSublayer:_previewLayer];
 }
 
 - (void)setupDynamics {
@@ -125,27 +126,32 @@ static inline CGPoint GetControlPointForQuadBezier(CGPoint start, CGPoint end, C
 - (void)panned:(UIPanGestureRecognizer *)gestureRecognizer {
     if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
         CGPoint translation = [gestureRecognizer translationInView:self.view];
-        [gestureRecognizer setTranslation:CGPointZero inView:self.view];
+
         CGPoint anchor = _middleAnchorBottom.anchorPoint;
-        anchor.x += translation.x;
-        anchor.y += translation.y;
+        anchor.x += translation.x; anchor.y += translation.y;
         _middleAnchorBottom.anchorPoint = _middleAnchorTop.anchorPoint = anchor;
+        
+        [gestureRecognizer setTranslation:CGPointZero inView:self.view];
     }
     else {
         CGPoint location = _middleView.center;
         CGPoint newAnchor = CGPointZero;
+        CGPoint newPreviewOrigin = CGPointZero;
         if (location.x < self.view.internalCenter.x) {
             newAnchor = (CGPoint){0, self.view.internalCenter.y};
+            newPreviewOrigin.x = -CGRectGetMaxX(self.view.bounds);
         }
         else {
             newAnchor = (CGPoint){CGRectGetMaxX(self.view.bounds), self.view.internalCenter.y};
+            newPreviewOrigin.x = 0;
         }
+        _previewLayer.frame = (CGRect){newPreviewOrigin, _previewLayer.bounds.size};
         _middleAnchorBottom.anchorPoint = _middleAnchorTop.anchorPoint = newAnchor;
     }
 }
 
 #define MIN3(_a, _b, _c) (MIN(_a, _b) < MIN(_a, _c) ? MIN(_a, _b) : MIN(_a, _c))
-
+#define MAX3(_a, _b, _c) (MAX(_a, _b) > MAX(_a, _c) ? MAX(_a, _b) : MAX(_a, _c))
 #pragma mark - Display Update Callback
 - (void)displayTick:(CADisplayLink *)link {
     UIBezierPath *path = [UIBezierPath bezierPath];
@@ -155,13 +161,20 @@ static inline CGPoint GetControlPointForQuadBezier(CGPoint start, CGPoint end, C
     CGPoint controlPoint = GetControlPointForQuadBezier(startPoint, endPoint, midPoint);
     [path moveToPoint:startPoint];
     [path addQuadCurveToPoint:endPoint controlPoint:controlPoint];
-    
+
     CGRect frame = _imageView.frame;
     frame.origin.x = fmax(MIN3(_topView.center.x, _bottomView.center.x, _middleView.center.x) - self.imageOffset, 0);
     _imageView.frame = frame;
     frame.size.width = (CGRectGetWidth(self.view.bounds) - _middleView.center.x);
     _pathView.frame = _imageView.bounds;
     [_pathView setPath:path startPoint:(CGPoint){startPoint.x, 0}];
+    
+    [CATransaction begin];
+    [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+    CGPoint previewOrigin = _previewLayer.frame.origin;
+    previewOrigin.x = fmin(MAX3(_topView.center.x, _bottomView.center.x, _middleView.center.x) - CGRectGetWidth(self.view.bounds), 0);
+    _previewLayer.frame = (CGRect){previewOrigin, _previewLayer.frame.size};
+    [CATransaction commit];
 }
 
 @end
